@@ -143,7 +143,8 @@ img {
 }
 .nav-item,
 .contact-item,
-.project-item {
+.project-item,
+.policy {
   text-decoration: none;
 }
 .contact-item {
@@ -158,7 +159,8 @@ img {
   padding-bottom: 24px;
 }
 .nav-item,
-.contact-item {
+.contact-item,
+.policy {
   transition: color var(--primary-transition);
 }
 
@@ -166,7 +168,8 @@ img {
 .nav-item:hover,
 .contact-item:hover,
 .contact-item:focus,
-.current {
+.current,
+.policy {
   color: var(--primary-brand-color);
 }
 .current::after {
@@ -548,17 +551,104 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--primary-header-color);
+  padding-bottom: 16px;
 }
 /* modal form */
 .modal-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
 }
-textarea {
+.modal-label {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+.label-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 35px;
+
+  transition: border var(--primary-transition);
+}
+.label-title {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-subtle-color);
+  padding-bottom: 4px;
+}
+.label-icon {
+  position: absolute;
+  left: 16px;
+  bottom: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateY(100%);
+
+  transition: fill var(--primary-transition);
+}
+.label-input:focus,
+.textarea-label:focus {
+  border: 1px solid var(--primary-brand-color);
+}
+.label-input:focus ~ .label-icon {
+  fill: var(--primary-brand-color);
+}
+.textarea-label {
   resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 120px;
+  padding: 8px 16px;
+
+  transition: border var(--primary-transition);
+}
+.textarea-label::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.check-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  padding-top: 16px;
+}
+.check-input {
+  position: absolute;
+}
+.check-title {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: #757575;
+  padding-left: 24px;
+}
+.check-icon {
+  position: absolute;
+
+  display: inline-block;
+  border: 1.25px solid var(--primary-header-color);
+  border-radius: 2px;
+
+  width: 16px;
+  height: 16px;
 }
 
 /* portfolio */
