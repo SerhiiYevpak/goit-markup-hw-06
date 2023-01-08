@@ -159,8 +159,7 @@ img {
   padding-bottom: 24px;
 }
 .nav-item,
-.contact-item,
-.policy {
+.contact-item {
   transition: color var(--primary-transition);
 }
 
@@ -507,7 +506,6 @@ img {
   padding-right: 24px;
   padding-bottom: 24px;
   width: 408px;
-  height: 576px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -567,70 +565,64 @@ img {
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-}
-.label-input {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  height: 40px;
-  padding-left: 35px;
 
-  transition: border var(--primary-transition);
-}
-.label-title {
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--primary-subtle-color);
-  padding-bottom: 4px;
+}
+.label-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 35px;
+  margin-top: 4px;
+
+  transition: border var(--primary-transition);
 }
 .label-icon {
   position: absolute;
   left: 16px;
   bottom: 50%;
-  width: 18px;
-  height: 18px;
   transform: translateY(100%);
 
   transition: fill var(--primary-transition);
 }
 .label-input:focus,
-.textarea-label:focus {
+.textarea:focus {
   border: 1px solid var(--primary-brand-color);
 }
 .label-input:focus ~ .label-icon {
   fill: var(--primary-brand-color);
 }
-.textarea-label {
+.textarea {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 120px;
   padding: 8px 16px;
-
-  transition: border var(--primary-transition);
-}
-.textarea-label::placeholder {
+  margin-top: 4px;
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 
+  transition: border var(--primary-transition);
+}
+.textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.check-label {
+/* check-box */
+.label-checkbox {
   position: relative;
   display: flex;
   align-items: center;
 
+  padding-bottom: 24px;
   padding-top: 16px;
-}
-.check-input {
-  position: absolute;
-}
-.check-title {
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
@@ -638,17 +630,68 @@ img {
   letter-spacing: 0.04em;
 
   color: #757575;
-  padding-left: 24px;
 }
-.check-icon {
-  position: absolute;
 
+.check-label {
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.check-vector {
   display: inline-block;
   border: 1.25px solid var(--primary-header-color);
   border-radius: 2px;
-
   width: 16px;
   height: 16px;
+  margin-right: 8px;
+}
+
+.checkbox:checked + .check-vector {
+  background-image: url("../images/check-vector.svg");
+  background-origin: border-box;
+  background-size: contain;
+  border-color: transparent;
+}
+.policy {
+  padding: 4px;
+}
+.send-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--primary-brand-color);
+  color: var(--primary-bg-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin: 0 auto;
+
+  padding: 16px 66px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: box-shadow var(--primary-transition);
+}
+.send-button:hover {
+  background: var(--primary-brand-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 4px;
 }
 
 /* portfolio */

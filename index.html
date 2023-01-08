@@ -373,51 +373,51 @@
           <form class="modal-form">
             <label class="modal-label">
               <input type="text" name="name" class="label-input" required />
-              <p class="label-title">Name</p>
-              <svg class="label-icon">
+              Name
+              <svg class="label-icon" width="18px" height="18px">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </label>
             <label class="modal-label">
               <input type="tel" name="tel" class="label-input" required />
-              <p class="label-title">Phone</p>
-              <svg class="label-icon">
+              Phone
+              <svg class="label-icon" width="15px" height="18px">
                 <use href="./images/icons.svg#icon-call"></use>
               </svg>
             </label>
             <label class="modal-label">
               <input type="email" name="email" class="label-input" required />
-              <p class="label-title">Email</p>
-              <svg class="label-icon">
+              Email
+              <svg class="label-icon" width="15px" height="18px">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
             </label>
 
             <label class="modal-label">
               <textarea
-                class="textarea-label"
+                class="textarea"
                 name="comment"
-                type="text"
                 placeholder="Text input"
               >
               </textarea>
-              <p class="label-title">Comment</p>
+              Comment
             </label>
           </form>
-          <label class="check-label">
-            <p class="check-title">
-              I accept the terms and conditions of the
-              <a class="policy" href="#">Privacy Policy</a>
-            </p>
-            <input
-              class="check-input visually-hidden"
-              type="checkbox"
-              name="check"
-              value=""
-              checked
-            />
-            <span class="check-icon"></span>
-          </label>
+          <div class="label-checkbox">
+            <label class="check-label">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="checkbox"
+                value="checkbox"
+              />
+              <span class="check-vector"></span>
+              I accept the terms and
+              conditions of the
+              <a class="policy" href="#"> Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="send-button">Send</button>
         </div>
       </div>
     </main>
